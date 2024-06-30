@@ -69,7 +69,7 @@ class MultiMessageHandler:
             for bot_message in bot_messages:
                 self.session_manager.add_message(user_id, "assistant", bot_message)
                 
-                delay = random.uniform(1, 5)
+                delay = random.uniform(5, 10)
                 await asyncio.sleep(delay)
                 
                 await self.bot.send_message(chat_id=user_id, text=bot_message)
